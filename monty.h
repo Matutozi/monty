@@ -5,6 +5,7 @@
 #ifndef MONTY_H
 #define MONTY_H
 
+#define MAX_STACK_SIZE 100
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
