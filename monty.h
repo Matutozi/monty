@@ -6,6 +6,8 @@
 #define MONTY_H
 
 #define MAX_STACK_SIZE 100
+void push(stack_t **stack, unsigned int line_number);
+void pall(stack_t **stack, unsigned int line_number);
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
