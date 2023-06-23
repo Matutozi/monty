@@ -51,4 +51,19 @@ typedef struct instruction_s
         void (*f)(stack_t **stack, unsigned int line_number);
 } instruction_t;
 
+line_t *textfile_to_array(const char *filename);
+char **split_line(char *line);
+void free_stack(stack_t *head);
+void free_lines(line_t *lines);
+void monty_error(monty_t *monty);
+void (*get_op_func(char *s))(stack_t **stack, unsigned int line_number);
+void op_push(stack_t **stack, unsigned int line_number);
+void op_pall(stack_t **stack, unsigned int line_number);
+void op_pint(stack_t **stack, unsigned int line_number);
+int _atoi(char *s, int *n);
+void get_swap(stack_t **stack, unsigned int line_number);
+void get_sub(stack_t **stack, unsigned int line_number);
+void get_rotr(stack_t **stack, unsigned int line_number);
+void get_free(stack_t *stack);
+void get_nop(stack_t **stack, unsigned int line_number);
 #endif /*MONTY_H */
