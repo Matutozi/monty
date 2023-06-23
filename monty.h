@@ -2,12 +2,10 @@
 #define MONTY_H
 
 #include <stdio.h>
-#ifndef MONTY_H
 #define MONTY_H
+stack_t *stack = NULL;
 
 #define MAX_STACK_SIZE 100
-void push(stack_t **stack, unsigned int line_number);
-void pall(stack_t **stack, unsigned int line_number);
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
  * @n: integer
@@ -23,6 +21,21 @@ typedef struct stack_s
         struct stack_s *prev;
         struct stack_s *next;
 } stack_t;
+
+typedef struct stack_s {
+	int n;
+	struct stack_s *prev;
+	struct stack_s *next;
+} stack_t;
+
+typedef struct line_s {
+	char *content;
+	int number;
+} line_t;
+
+/* Global variables */
+extern FILE *file;
+extern char *operand;
 
 /**
  * struct instruction_s - opcode and its function
